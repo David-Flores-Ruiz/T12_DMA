@@ -16,5 +16,10 @@ void DMA_clock_gating(void);
 
 void DMA_init(void);
 
+void DMA_init_P1_1(void);
+
+void DMA_init_P1_2(void);
+
+void DMA_init_P1_3(void);
 
 #endif /* DMA_DRIVER_H_ */

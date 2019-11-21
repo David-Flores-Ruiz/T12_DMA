@@ -31,7 +31,11 @@ int main(void)
 	GPIO_clock_gating(GPIO_C);
 	GPIO_pin_control_register(GPIO_C, bit_6, &sw2);
 	DMA_clock_gating();
-	DMA_init(); /* Configure the T*/
+	//DMA_init(); /* Configure the T*/
+	//DMA_init_P1_1(); //* Transfiere arreglo en 1 solo paso con arrays uint8_t */
+	//DMA_init_P1_2(); //* Transfiere arreglo en 2 pasos con arrays uint8_t */
+	DMA_init_P1_3(); //* Transfiere los datos: 5, 7, 9, 1, 3, 5... con arrays uint8_t */
+
 	NVIC_enable_interrupt_and_priotity(DMA_CH0_IRQ, PRIORITY_5);
 	NVIC_global_enable_interrupts;
 
