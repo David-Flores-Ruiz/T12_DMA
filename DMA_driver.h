@@ -22,4 +22,6 @@ void DMA_init_P1_2(void);
 
 void DMA_init_P1_3(void);
 
+void DMA_init_P2_SEN(void);
+
 #endif /* DMA_DRIVER_H_ */

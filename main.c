@@ -34,9 +34,13 @@ int main(void)
 	//DMA_init(); /* Configure the T*/
 	//DMA_init_P1_1(); //* Transfiere arreglo en 1 solo paso con arrays uint8_t */
 	//DMA_init_P1_2(); //* Transfiere arreglo en 2 pasos con arrays uint8_t */
-	DMA_init_P1_3(); //* Transfiere los datos: 5, 7, 9, 1, 3, 5... con arrays uint8_t */
+	//DMA_init_P1_3(); //* Transfiere los datos: 5, 7, 9, 1, 3, 5... con arrays uint8_t */
+	  DMA_init_P2_SEN();
+	//DMA_inti_P3_CUA();
+	//DMA_inti_P3_TRI();
 
 	NVIC_enable_interrupt_and_priotity(DMA_CH0_IRQ, PRIORITY_5);
+	NVIC_enable_interrupt_and_priotity(DMA_CH2_IRQ, PRIORITY_5);
 	NVIC_global_enable_interrupts;
 
 
